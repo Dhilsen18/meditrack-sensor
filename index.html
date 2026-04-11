@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MediTrack Sensor - Monitoreo IoT en tiempo real para medicamentos por TechnoByteLambders (UPC). Preservando la salud a través de datos precisos.">
+    <title>MediTrack Sensor</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Imagenes/Logo_MediTrack.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Header Bar (Minimalist) -->
+    <div class="top-header-new d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center h-100">
+            <div class="contact-links">
+                <span class="me-4"><i class="bi bi-telephone text-orange me-2"></i> +51 987 654 321</span>
+                <span><i class="bi bi-envelope text-orange me-2"></i> contacto@technobytelambders.pe</span>
+            </div>
+            <div class="social-links-top">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <span class="ms-4 opacity-75 small"><i class="bi bi-globe me-1"></i> ESPAÑOL</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Navbar (Clean) -->
+    <nav class="navbar navbar-expand-lg navbar-new shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Imagenes/Logo_MediTrack.png" alt="MediTrack Logo" height="42" class="me-2">
+                <span class="fw-bold fs-4">MediTrack <span class="text-orange">Sensor</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-1 text-navy"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-lg-5">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnologia">Tecnología</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sectores">Sectores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-orange-rounded shadow-sm">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 2: Hero Section -->
+    <header id="inicio" class="hero-section">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="row justify-content-center w-100">
+                <div class="col-lg-12">
+                    <span id="typing-tagline" class="hero-tagline"></span>
+                    <h1 id="typing-title" class="hero-title"></h1>
+
+                    <div class="hero-separator"></div>
+
+                    <p id="typing-desc" class="hero-subtitle"></p>
+
+                    <div class="d-flex justify-content-center mt-5">
+                        <a href="#contacto" id="hero-cta" class="btn btn-hero"
+                            style="opacity: 0; transform: translateY(20px); transition: all 0.8s ease;">
+                            <i class="bi bi-arrow-down-right-circle"></i> Contáctanos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 3: Floating Feature Cards (Image 2 Redesign) -->
+    <section id="problema" class="floating-cards-wrapper grid-pattern-bg">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="floating-card-horizontal reveal-card">
+                        <div class="floating-icon-box"><i class="bi bi-snow2"></i></div>
+                        <div class="floating-card-content">
+                            <h4>Cadena de Frío</h4>
+                            <p>Evita pérdidas críticas con monitoreo constante de temperatura.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="floating-card-horizontal reveal-card">
+                        <div class="floating-icon-box"><i class="bi bi-bell-slash"></i></div>
+                        <div class="floating-card-content">
+                            <h4>Alertas Real-Time</h4>
+                            <p>Notificaciones inmediatas ante cualquier desviación térmica.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="floating-card-horizontal reveal-card">
+                        <div class="floating-icon-box"><i class="bi bi-shield-check"></i></div>
+                        <div class="floating-card-content">
+                            <h4>Cumplimiento</h4>
+                            <p>Adherencia total a las normas sanitarias de DIGEMID.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Sobre Nosotros (Redesigned) -->
+    <section id="nosotros" class="bg-white overflow-hidden grid-pattern-bg">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Left: Overlapping Images -->
+                <div class="col-lg-6 reveal-left">
+                    <div class="about-image-group">
+                        <img src="Imagenes/bellagio pabrik.jpeg" alt="MediTrack Systems" class="about-img-main">
+                        <img src="Imagenes/about_secondary.jpeg" alt="Pharmacists at work" class="about-img-secondary">
+                        <div class="about-experience-box">
+                            <i class="bi bi-cpu fs-1 mb-2"></i>
+                            <h3 class="fw-bold mb-0">100%</h3>
+                            <p class="small mb-0">Innovación UPC</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Content -->
+                <div class="col-lg-6 reveal-right">
+                    <div class="ps-lg-4">
+                        <span class="about-tagline mb-3">QUIÉNES SOMOS</span>
+                        <h2 class="display-5 fw-bold mb-4">Liderando el cambio en la <br> logística farmacéutica</h2>
+                        <p class="text-muted mb-4 fs-5">
+                            <strong>TechnoByteLambders</strong> es una startup innovadora formada por estudiantes de
+                            Ingeniería de Software de la <strong>UPC</strong>. Nacimos con la misión de aplicar el
+                            Internet de las Cosas (IoT) para resolver problemas críticos en la salud pública.
+                        </p>
+
+                        <div class="about-feature reveal-item">
+                            <div class="about-feature-icon"><i class="bi bi-gear-fill"></i></div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Enfoque en Seguridad Industrial</h5>
+                                <p class="text-muted small mb-0">Monitoreo robusto para hubs logísticos de gran escala.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="about-feature reveal-item">
+                            <div class="about-feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Cumplimiento Normativo RT</h5>
+                                <p class="text-muted small mb-0">Alineados con los estándares de DIGEMID y el MINSA.</p>
+                            </div>
+                        </div>
+
+                        <ul class="about-list p-0 mb-4">
+                            <li class="reveal-item"><i class="bi bi-check-circle-fill"></i> Compromiso absoluto con la
+                                integridad del
+                                producto</li>
+                            <li class="reveal-item"><i class="bi bi-check-circle-fill"></i> Soluciones escalables para
+                                centros regionales
+                            </li>
+                            <li class="reveal-item"><i class="bi bi-check-circle-fill"></i> Desarrollo proactivo basado
+                                en necesidades
+                                reales</li>
+                        </ul>
+
+                        <div class="signature-card shadow-sm reveal-item">
+                            <img src="https://ui-avatars.com/api/?name=TBL+Team&background=F37021&color=fff"
+                                alt="Team Avatar" class="signature-img shadow-sm">
+                            <div>
+                                <h6 class="fw-bold mb-0">Equipo TechnoByteLambders</h6>
+                                <p class="text-orange small mb-0 font-italic">Fundadores & Desarrolladores UPC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: IoT Technology (New Centered Layout) -->
+    <section id="tecnologia" class="bg-light grid-pattern-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <div class="bg-text-watermark reveal-watermark">MONITOREO 360</div>
+                <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item">Monitoreo 360°</span>
+                <h2 class="display-5 fw-bold mt-2 reveal-item">Tecnología Inteligente</h2>
+                <p class="text-muted mx-auto reveal-item" style="max-width: 700px;">
+                    Nuestra solución integral combina hardware de grado médico con software avanzado para garantizar el
+                    monitoreo total de tus activos más valiosos.
+                </p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-feature-card shadow-sm reveal-item">
+                        <div class="tech-icon-circle"><i class="bi bi-thermometer-half"></i></div>
+                        <h4>Temperatura</h4>
+                        <p class="text-muted small">Control estricto para vacunas y biológicos en rangos críticos de 2°C
+                            a 8°C.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-feature-card shadow-sm reveal-item">
+                        <div class="tech-icon-circle"><i class="bi bi-droplet"></i></div>
+                        <h4>Humedad</h4>
+                        <p class="text-muted small">Evitamos la degradación química y proliferación de microorganismos.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-feature-card shadow-sm reveal-item">
+                        <div class="tech-icon-circle"><i class="bi bi-brightness-high"></i></div>
+                        <h4>Iluminación</h4>
+                        <p class="text-muted small">Protección avanzada contra la fotodegradación para medicamentos
+                            sensibles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-feature-card shadow-sm reveal-item">
+                        <div class="tech-icon-circle"><i class="bi bi-broadcast"></i></div>
+                        <h4>Conectividad 24/7</h4>
+                        <p class="text-muted small">Alertas inmediatas vía IoT incluso en zonas de baja cobertura
+                            regional.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Professional Redesign (Image 3 Style) -->
+            <div class="dashboard-medical-container reveal-item">
+                <div class="text-center mb-5">
+                    <p class="text-success small fw-bold mb-1"><i class="bi bi-house-door me-2"></i>TECHNOBYTELAMBDERS
+                    </p>
+                    <h3 class="fw-bold text-dark mb-0">Live Data Dashboard — Nodo 01</h3>
+                    <p class="text-muted small mb-3">Logística Farmacéutica · DIGEMID / MINSA</p>
+                    <div class="status-badge-medical">
+                        <span class="status-dot-green"></span>
+                        <span class="small fw-bold text-dark">Sistema activo</span>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <!-- Temp Card -->
+                    <div class="col-lg-4">
+                        <div class="medical-data-card card-bg-orange">
+                            <span class="card-label label-orange">TEMP</span>
+                            <div class="card-value-group">
+                                <h2 id="iot-temp" class="value-orange">2.0</h2>
+                            </div>
+                            <span class="unit-text d-block mb-3">°Celsius</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill fill-orange" style="width: 40%;"></div>
+                            </div>
+                            <p class="range-info">Rango: 2 – 8°C</p>
+                        </div>
+                    </div>
+                    <!-- Humidity Card -->
+                    <div class="col-lg-4">
+                        <div class="medical-data-card card-bg-blue">
+                            <span class="card-label label-blue">HUMIDITY</span>
+                            <div class="card-value-group">
+                                <h2 id="iot-humidity" class="value-blue">48.4</h2>
+                            </div>
+                            <span class="unit-text d-block mb-3">% RH</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill fill-blue" style="width: 60%;"></div>
+                            </div>
+                            <p class="range-info">Rango: 30 – 70% RH</p>
+                        </div>
+                    </div>
+                    <!-- Light Card -->
+                    <div class="col-lg-4">
+                        <div class="medical-data-card card-bg-gold">
+                            <span class="card-label label-gold">LIGHT</span>
+                            <div class="card-value-group">
+                                <h2 id="iot-light" class="value-gold">437</h2>
+                            </div>
+                            <span class="unit-text d-block mb-3">Lux intensity</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill fill-gold" style="width: 45%;"></div>
+                            </div>
+                            <p class="range-info">Rango: 0 – 1000 Lux</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-medical-footer">
+                    <div class="d-flex justify-content-between align-items-center small">
+                        <div class="text-muted"><i class="bi bi-shield-check me-2 text-success"></i>SEGURIDAD AES-256 ·
+                            GRADO FARMACÉUTICO</div>
+                        <div class="text-muted">Última actualización: hace 2 min</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Mini Stats -->
+            <div class="row g-3 mt-4 justify-content-center">
+                <div class="col-lg-3">
+                    <div class="mini-stat-card">
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <i class="bi bi-activity text-success fs-4"></i>
+                            <div>
+                                <p class="text-muted-dark small fw-bold mb-0">ALERTAS HOY</p>
+                                <h5 class="fw-bold mb-0 text-dark">0</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="mini-stat-card">
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <i class="bi bi-display text-primary fs-4"></i>
+                            <div>
+                                <p class="text-muted-dark small fw-bold mb-0">UPTIME</p>
+                                <h5 class="fw-bold mb-0 text-dark">99.8%</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="mini-stat-card">
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <i class="bi bi-clock-history text-warning fs-4"></i>
+                            <div>
+                                <p class="text-muted-dark small fw-bold mb-0">REFRESCO</p>
+                                <h5 class="fw-bold mb-0 text-dark">30 s</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 pt-4 reveal-item">
+                <p class="text-muted mb-4 mx-auto" style="max-width: 800px;">
+                    MediTrack Care ofrece planes integrales y personalizados. Disfrute de la tranquilidad de datos
+                    confiables en tiempo real, garantizando la calidad total de su inventario.
+                </p>
+                <a href="#contacto" class="btn btn-hero">Comparar Soluciones de Monitoreo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Implementación Estratégica (Clean Cards) -->
+    <section id="sectores" class="bg-white grid-pattern-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <div class="bg-text-watermark reveal-watermark">ALCANCE GLOBAL</div>
+                <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item">Alcance Global</span>
+                <h2 class="display-5 fw-bold mt-2 reveal-item">Implementación Estratégica</h2>
+                <p class="text-muted mx-auto reveal-item" style="max-width: 650px;">
+                    Soluciones de monitoreo adaptadas a las necesidades específicas de cada nivel de la cadena
+                    farmacéutica.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1: Logística Industrial -->
+                <div class="col-lg-4">
+                    <div class="sector-card-premium reveal-zoom">
+                        <div class="sector-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+                                class="sector-img" alt="Almacenes Logísticos">
+                            <div class="sector-badge orange">
+                                <i class="bi bi-house-door"></i> Escala industrial
+                            </div>
+                        </div>
+                        <div class="sector-floating-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <div class="sector-content">
+                            <h3 class="sector-title">Logística industrial</h3>
+                            <p class="sector-text">
+                                Optimización para centros de distribución nacional (Lurín). Dashboards con cientos de
+                                nodos en tiempo real, sin margen de error.
+                            </p>
+                            <div class="sector-tags mb-4">
+                                <span class="tag">Multi-nodo</span>
+                                <span class="tag">Tiempo real</span>
+                                <span class="tag">AES-256</span>
+                            </div>
+                            <div class="sector-footer">
+                                <a href="#" class="sector-link">SABER MÁS <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Hospitales Regionales -->
+                <div class="col-lg-4">
+                    <div class="sector-card-premium reveal-zoom">
+                        <div class="sector-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+                                class="sector-img" alt="Regional">
+                            <div class="sector-badge blue">
+                                <i class="bi bi-shield-check"></i> Zona remota
+                            </div>
+                        </div>
+                        <div class="sector-floating-icon">
+                            <i class="bi bi-hospital"></i>
+                        </div>
+                        <div class="sector-content">
+                            <h3 class="sector-title">Hospitales regionales</h3>
+                            <p class="sector-text">
+                                Conectividad de bajo consumo para zonas como Tingo María. Garantizamos potencia
+                                biológica de vacunas en entornos difíciles.
+                            </p>
+                            <div class="sector-tags mb-4">
+                                <span class="tag">Bajo consumo</span>
+                                <span class="tag">MINSA</span>
+                                <span class="tag">Cadena de frío</span>
+                            </div>
+                            <div class="sector-footer">
+                                <a href="#" class="sector-link">CASO ÉXITO <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Retail & Farmacias -->
+                <div class="col-lg-4">
+                    <div class="sector-card-premium reveal-zoom">
+                        <div class="sector-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=800&q=80"
+                                class="sector-img" alt="Farmacias">
+                            <div class="sector-badge green">
+                                <i class="bi bi-shop"></i> Última milla
+                            </div>
+                        </div>
+                        <div class="sector-floating-icon">
+                            <i class="bi bi-capsule"></i>
+                        </div>
+                        <div class="sector-content">
+                            <h3 class="sector-title">Retail & farmacias</h3>
+                            <p class="sector-text">
+                                Soluciones compactas para cumplimiento de normas técnicas térmicas DIGEMID. Protección
+                                total al consumidor.
+                            </p>
+                            <div class="sector-tags mb-4">
+                                <span class="tag">Compacto</span>
+                                <span class="tag">DIGEMID</span>
+                                <span class="tag">Plug & play</span>
+                            </div>
+                            <div class="sector-footer">
+                                <a href="#" class="sector-link">EXPLORAR PLANES <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Stats Counter (Inspired by Image 1) -->
+    <section class="stats-counter-section">
+        <div class="stats-overlay"></div>
+        <div class="container position-relative z-index-2">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-blob">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h2 class="stat-number">+<span class="counter" data-target="500">0</span></h2>
+                        <p class="stat-label">Sensores Instalados</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-blob">
+                            <i class="bi bi-building-check"></i>
+                        </div>
+                        <h2 class="stat-number"><span class="counter" data-target="60">0</span></h2>
+                        <p class="stat-label">Hubs Logísticos</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-blob">
+                            <i class="bi bi-shield-fill-check"></i>
+                        </div>
+                        <h2 class="stat-number"><span class="counter" data-target="96">0</span>%</h2>
+                        <p class="stat-label">Eficiencia Logística</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item text-center">
+                        <div class="stat-blob">
+                            <i class="bi bi-broadcast-pin"></i>
+                        </div>
+                        <h2 class="stat-number">24/7</h2>
+                        <p class="stat-label">Activos para ti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Subscription Plans (Redesigned - Premium Image Style) -->
+    <section id="planes" class="pricing-section-premium grid-pattern-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <div class="bg-text-watermark reveal-watermark">NUESTROS PLANES</div>
+                <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item">Inversión
+                    Inteligente</span>
+                <h2 class="display-5 fw-bold mt-2 reveal-item">Planes de Monitoreo</h2>
+                <p class="text-muted mx-auto mb-4 reveal-item" style="max-width: 650px;">
+                    Soluciones de monitoreo adaptadas a las necesidades específicas de cada nivel de la cadena
+                </p>
+            </div>
+
+            <div class="row g-4 align-items-stretch justify-content-center">
+                <!-- Plan 1: CORE -->
+                <div class="col-lg-4">
+                    <div class="pricing-card-white h-100 reveal-card">
+                        <div class="pricing-header">
+                            <span class="plan-name">CORE</span>
+                            <div class="plan-price">$49<span class="price-period">/mes</span></div>
+                            <p class="plan-desc">Ideal para farmacias pequeñas o proyectos piloto de monitoreo IoT.</p>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> 3 sensores IoT</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Alertas vía email</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> 30 días de historial</li>
+                            <li class="inactive"><i class="bi bi-x-circle-fill"></i> API de integración</li>
+                            <li class="inactive"><i class="bi bi-x-circle-fill"></i> Dashboard avanzado</li>
+                            <li class="inactive"><i class="bi bi-x-circle-fill"></i> Soporte dedicado</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn btn-outline-pricing">Seleccionar Core</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 2: BUSINESS (HIGHLIGHTED) -->
+                <div class="col-lg-4">
+                    <div class="pricing-card-white highlight reveal-card">
+                        <div class="recommended-badge">RECOMENDADO</div>
+                        <div class="pricing-header">
+                            <span class="plan-name orange-text">BUSINESS</span>
+                            <div class="plan-price">$149<span class="price-period">/mes</span></div>
+                            <p class="plan-desc">Para distribuidores y hubs logísticos con cumplimiento DIGEMID activo.
+                            </p>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> 15 sensores IoT</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Alertas WhatsApp / SMS</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> 1 año de historial</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Dashboard avanzado</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> API de integración</li>
+                            <li class="inactive"><i class="bi bi-x-circle-fill"></i> Instalación in-situ</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn btn-solid-pricing">Comenzar ahora <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 3: ENTERPRISE -->
+                <div class="col-lg-4">
+                    <div class="pricing-card-white h-100 reveal-card">
+                        <div class="pricing-header">
+                            <span class="plan-name">ENTERPRISE</span>
+                            <div class="plan-price">Personalizado</div>
+                            <p class="plan-desc">Para centros regionales y cadenas con requerimientos de escala
+                                nacional.</p>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Sensores ilimitados</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> API de integración full</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Soporte 24/7 dedicado</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Instalación in-situ</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> SLA garantizado</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Reportes DIGEMID / MINSA</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn btn-outline-pricing">Contactar ventas <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-bottom-info text-center mt-5 reveal-item">
+                <p class="text-muted small"><i class="bi bi-shield-check text-orange me-2"></i> Todos los planes
+                    incluyen cifrado AES-256 y cumplimiento normativo farmacéutico</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Contact (Redesigned - Image 1) -->
+    <section id="contacto" class="contact-section-new grid-pattern-bg">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Left Side: Info -->
+                <div class="col-lg-6 reveal-left">
+                    <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item">Soporte
+                        Especializado</span>
+                    <h2 class="display-5 fw-bold mt-2 reveal-item">Habla con Expertos</h2>
+                    <p class="text-muted mt-3 mb-5 reveal-item">
+                        Nuestro equipo de especialistas en IoT está listo para ayudarte a optimizar tu cadena de frío.
+                        Contáctanos para una demostración personalizada y garantiza la integridad de tu inventario.
+                    </p>
+
+                    <div class="info-grid">
+                        <div class="info-box-new reveal-item">
+                            <div class="info-icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div class="info-text">
+                                <h6>Sede Central</h6>
+                                <p>Av. General Felipe Salaverry <br> Lima, Perú - UPC San Isidro</p>
+                            </div>
+                        </div>
+                        <div class="info-box-new reveal-item">
+                            <div class="info-icon-box"><i class="bi bi-envelope-fill"></i></div>
+                            <div class="info-text">
+                                <h6>Soporte Técnico</h6>
+                                <p>soporte@technobytelambders.pe <br> contacto@technobytelambders.pe</p>
+                            </div>
+                        </div>
+                        <div class="info-box-new reveal-item">
+                            <div class="info-icon-box"><i class="bi bi-telephone-fill"></i></div>
+                            <div class="info-text">
+                                <h6>Llámanos</h6>
+                                <p>+51 987 654 321 <br> Anexo: 1202</p>
+                            </div>
+                        </div>
+                        <div class="info-box-new reveal-item">
+                            <div class="info-icon-box"><i class="bi bi-clock-fill"></i></div>
+                            <div class="info-text">
+                                <h6>Horario de Atención</h6>
+                                <p>Lun - Vie: 09:00 - 18:00 <br> Sáb: 09:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="social-title reveal-item">Sigue nuestras redes sociales</p>
+                    <div class="social-links-circle reveal-item">
+                        <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Form Card -->
+                <div class="col-lg-6 reveal-right">
+                    <div class="contact-card-white shadow-lg">
+                        <h3 class="fw-bold mb-3">Envíanos un mensaje</h3>
+                        <p class="text-muted mb-4 small">Completa el formulario y un asesor técnico se pondrá en
+                            contacto contigo en menos de 24 horas.</p>
+
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-new">Nombre</label>
+                                    <input type="text" class="form-control-new w-100" placeholder="Tu nombre">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-new">Empresa</label>
+                                    <input type="text" class="form-control-new w-100" placeholder="Nombre empresa">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-new">Teléfono</label>
+                                    <input type="text" class="form-control-new w-100" placeholder="+51 ...">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-new">Email</label>
+                                    <input type="email" class="form-control-new w-100" placeholder="correo@ejemplo.com">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="form-label-new">Asunto</label>
+                                    <input type="text" class="form-control-new w-100"
+                                        placeholder="¿En qué podemos ayudarte?">
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label class="form-label-new">Mensaje</label>
+                                    <textarea class="form-control-new w-100" rows="4"
+                                        placeholder="Escribe tu mensaje aquí..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-send-message">ENVIAR MENSAJE <i
+                                            class="bi bi-send ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Redesigned - Image 2) -->
+    <footer class="footer-dark-new">
+        <div class="container">
+            <!-- Nav Center -->
+            <div class="footer-nav-center">
+                <a href="#inicio">Inicio</a>
+                <a href="#tecnologia">Tecnología</a>
+                <a href="#sectores">Sectores</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#planes">Planes</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-bottom-info row g-4 align-items-center">
+                <!-- Branding -->
+                <div class="col-lg-4">
+                    <div class="footer-logo-box text-center">
+                        <img src="Imagenes/Logo_MediTrack.png" alt="MediTrack Logo" height="40" class="mb-2">
+                        <h4 class="fw-bold mb-1">MediTrack <span class="text-orange">Sensor</span></h4>
+                        <p class="small mb-0">Tecnología de precisión para la logística farmacéutica.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-4 text-center">
+                    <div class="footer-contact-details small">
+                        <p class="mb-1"><i class="bi bi-geo-alt text-orange me-2"></i> Av. General Felipe Salaverry, San
+                            Isidro, Lima</p>
+                        <p class="mb-1"><i class="bi bi-telephone text-orange me-2"></i> Llámanos: +51 987 654 321</p>
+                        <p class="mb-0"><i class="bi bi-envelope text-orange me-2"></i> Email:
+                            contacto@technobytelambders.pe</p>
+                    </div>
+                </div>
+
+                <!-- Subscribe -->
+                <div class="col-lg-4">
+                    <div class="subscribe-box">
+                        <h6 class="text-uppercase letter-spacing-1 mb-3">Suscríbete al boletín</h6>
+                        <form class="subscribe-form mb-3">
+                            <input type="email" class="subscribe-input" placeholder="Tu correo electrónico">
+                            <button type="submit" class="subscribe-btn"><i class="bi bi-chevron-right"></i></button>
+                        </form>
+                        <div class="payment-icons justify-content-center">
+                            <img src="https://img.icons8.com/color/48/visa.png" class="payment-badge" alt="Visa">
+                            <img src="https://img.icons8.com/color/48/mastercard.png" class="payment-badge"
+                                alt="Mastercard">
+                            <img src="https://img.icons8.com/color/48/paypal.png" class="payment-badge" alt="Paypal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 pt-4 border-top border-white border-opacity-10 opacity-50 small">
+                <p class="mb-0">&copy; 2024 TechnoByteLambders (UPC). Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
