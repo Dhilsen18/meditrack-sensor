@@ -211,7 +211,7 @@ h4,
 /* Hero Section */
 .hero-section {
     padding: 160px 0 200px;
-    background: linear-gradient(rgba(44, 62, 80, 0.65), rgba(27, 38, 59, 0.6)), url('../Imagenes/How Does Puravive Weight Loss Work_.jpeg');
+    background: linear-gradient(rgba(44, 62, 80, 0.65), rgba(27, 38, 59, 0.6)), url('../Imagenes/section_home-hero.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2336,7 +2336,7 @@ footer {
 .stats-counter-section {
     position: relative;
     padding: 100px 0;
-    background: url('../Imagenes/What Are the Key Benefits of Using Facility Management Software_.jpeg');
+    background: url('../Imagenes/section_3.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
