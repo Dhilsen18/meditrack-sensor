@@ -114,9 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const startHeroAnimation = () => {
-        typeWriter("#typing-tagline", "Tecnología IoT de Precisión", 0, () => {
-            typeWriter("#typing-title", "Preservando la salud a través de datos precisos", 0, () => {
-                typeWriter("#typing-desc", "Reemplazamos procesos manuales propensos a errores con sensores inteligentes que monitorean cada variable crítica en tiempo real.", 0, () => {
+        typeWriter("#typing-tagline", "Monitoreo IoT para Medicamentos", 0, () => {
+            typeWriter("#typing-title", "Control en tiempo real de temperatura, humedad y luz", 0, () => {
+                typeWriter("#typing-desc", "Plataforma web para clínicas, farmacias y hospitales. Alertas automáticas y trazabilidad total.", 0, () => {
                     const btn = document.getElementById('hero-cta');
                     if (btn) {
                         btn.style.opacity = '1';
